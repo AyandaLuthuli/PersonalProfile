@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Background */
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-image: url("contact.jpg");
+
+        background-size: cover;
+      }
+
+      /* Navigation Bar */
+      /* Centering Container */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      /* Glass Card */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        width: 90%;
+        max-width: 400px;
+        color: white;
+      }
+
+      .glass-card h1 {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      /* Form Elements */
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input,
+      textarea {
+        padding: 12px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 16px;
+        outline: none;
+      }
+
+      textarea {
+        resize: none;
+        height: 120px;
+      }
+
+      button {
+        padding: 12px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: #00cccc;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background-color: #009999;
+        padding: 20px;
+        font-size: 26px;
+      }
+    </style>
+  </head>
+
+  <header>
+    <nav>
+      <div class="logo">Resume/CV</div>
+      <ul>
+        <li><a href="profile.html">Home</a></li>
+        <li><a href="Features.html">Features</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="history.html">Blog</a></li>
+      </ul>
+      <a href="contact.html" class="btn">CONTACT</a>
+    </nav>
+  </header>
+  <body>
+    <div class="container">
+      <div class="glass-card">
+        <h1>Contact Me</h1>
+        <form>
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

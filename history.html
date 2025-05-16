@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Features</title>
+    <nav>
+      <div class="logo" id="nav ul li a">Timelime</div>
+      <ul>
+        <li><a href="profile.html">Home</a></li>
+        <li><a href="Features.html">Features</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="Resume.html">Resume</a></li>
+        <li><a href="history.html">Blog</a></li>
+      </ul>
+      <a href="contact.html" class="btn">CONTACT</a>
+    </nav>
+    <style>
+      .title {
+        text-align: center;
+        font-size: 32px;
+        margin: 30px 0;
+      }
+
+      .timeline {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1910px;
+        margin: 0 auto;
+        padding: 40px 30px;
+        position: relative;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: #ddd;
+        z-index: 0;
+      }
+
+      .timeline-item {
+        background: white;
+        padding: 20px;
+        width: 180px;
+        text-align: center;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .timeline-item h2 {
+        margin: 15px 0 10px;
+        font-size: 20px;
+      }
+
+      .timeline-item p {
+        font-size: 13px;
+        color: #555;
+      }
+
+      .circle {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background: white;
+        border: 4px solid;
+        border-radius: 50%;
+        margin: 0 auto;
+        font-weight: bold;
+        position: relative;
+        top: -40px;
+        z-index: 2;
+      }
+
+     
+      .blue .circle {
+        border-color: #3366ff;
+        color: #3366ff;
+      }
+      .yellow .circle {
+        border-color: #ffcc00;
+        color: #ffcc00;
+      }
+      .red .circle {
+        border-color: #ff4d4d;
+        color: #ff4d4d;
+      }
+      .cyan .circle {
+        border-color: #00cccc;
+        color: #00cccc;
+      }
+      .purple .circle {
+        border-color: #9933ff;
+        color: #9933ff;
+      }
+     .history {
+        font-size: 13px;
+        color: #555;
+        list-style-type: circle;
+        padding: 0;
+        background-color:white;
+
+      }
+      .timeline-item:hover {
+        background: #f0f0f0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        width: 250px;
+        height: 250px;
+        padding: 30px;
+        
+      }
+        .timeline-item:hover p {
+            font-size: 24px;
+            transition: all 0.3s ease;
+           
+        }
+        .timeline-item:hover li {
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+    
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Linear Timeline Template</h1>
+    <div class="timeline">
+      <div class="timeline-item blue">
+        <div class="circle">01</div>
+        <h2>2022</h2>
+        <p>
+          Matriculated, Phoenix <br />College of Johannesburg, Johannesburg
+          <br />(Bachelor’s Pass).
+        </p>
+      </div>
+      <div class="timeline-item yellow">
+        <div class="circle">02</div>
+        <h2>2023</h2>
+        <p>Diploma in ICT <br />(Software Development), Walter Sisulu.</p>
+        
+      </div>
+      <div class="timeline-item red">
+        <div class="circle">03</div>
+        <h2>2024</h2>
+        <p>
+            <ul id="historyList">
+                <li class="history">University of Walter Sisulu</li><br />
+                <li class="history">Udemy Python full course</li><br>    
+              </ul>
+            
+        </p>
+      </div>
+      <div class="timeline-item cyan">
+        <div class="circle">04</div>
+        <h2>2025</h2>
+        <p>
+        <ul id="historyList">
+          <li class="history">University of Walter Sisulu</li><br />
+          <li class="history">Udemy HTML, CSS & JavaScript full course </li><br>    
+          <li class="history">FNB App Academy.</li>
+        </ul>
+        </p>
+      </div>
+      <div class="timeline-item purple">
+        <div class="circle">05</div>
+        <h2>Currently</h2>
+        <p>
+            <ul id="historyList">
+                <li class="history">Graduated </li>
+                <li class="history">Intership</li>
+                <li class="history">Job</li><br />
+
+            </ul>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

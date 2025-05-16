@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <!-- <style>body {
+
+
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: white;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #1a1a1a;
+    }
+    
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .btn {
+        background-color: #ff0055;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+    }
+    
+    .content {
+        max-width: 53%;
+    }
+    
+    .highlight {
+        color: #ff0055;
+        font-weight: bold;
+        
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+    
+    .image img {
+        width: 200px;
+        border-radius: 10px;
+    }
+    </style>-->
+    <style>
+      .icon-wrapper {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 25px;
+        display: inline-block;
+      }
+
+      .top-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
+
+      .bottom-icon img,
+      .top-icon img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .icon-wrapper:hover .top-icon {
+        display: block;
+        /* filter: brightness(1.2);
+        box-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055; */
+        transform: scale(1.1);
+      }
+
+      .icon-wrapper.instagram:hover img {
+        box-shadow: 0 0 30px rgba(255, 0, 150, 0.7);
+      }
+
+      .icon-wrapper.github:hover img {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+      }
+
+      .icon-wrapper.linkedin:hover img {
+        box-shadow: 0 0 50px rgba(0, 119, 181, 0.8);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Ayanda Luthuli</div>
+        <ul>
+          <li><a href="profile.html">Home</a></li>
+          <li><a href="Features.html">Features</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="Resume.html">Resume</a></li>
+          <li><a href="history.html">Blog</a></li>
+        </ul>
+        <a href="#" class="btn">CONTACT</a>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="content">
+        <p>WELCOME TO MY WORLD</p>
+        <h1>
+          Hi, I'm <span class="highlight">Ayanda Luthuli</span><br />a
+          <span class="bold">Developer.</span>
+        </h1>
+        <p class="description">
+          "I started learning <span class="highlight"> HTML and CSS</span> to
+          build my own personal profile website and showcase my skills as a
+          <span class="highlight">software developer</span> . As I explore
+          front-end development, I’m gaining hands-on experience in structuring
+          <span class="highlight">web pages</span>, styling them, and making
+          them visually appealing. This journey is helping me understand the
+          fundamentals of web design, responsive layouts, and UI/UX principles.
+          I’m excited to keep improving and eventually dive deeper into
+          <span class="highlight"> JavaScript</span> and advanced web
+          technologies!"....
+        </p>
+      </div>
+      <div class="image">
+        <img src="ayanda.png" alt="Profile Image" />
+        <br />
+        <div class="icon-wrapper instagram">
+          <div class="top-icon">
+            <img src="instaOriginal.png" alt="Instagram Colored" />
+          </div>
+          <div class="bottom-icon">
+            <img src="insta.jpg" alt="Instagram Outline" />
+          </div>
+        </div>
+
+        <div class="icon-wrapper github">
+          <div class="top-icon">
+            <img src="githubOriginal.png" alt="GitHub Colored" />
+          </div>
+          <div class="bottom-icon">
+            <img src="gighubb.png" alt="GitHub Outline" />
+          </div>
+        </div>
+        <div class="icon-wrapper linkedin">
+          <div class="top-icon">
+            <img src="linkOriginal.png" alt="GitHub Colored" />
+          </div>
+          <div class="bottom-icon">
+            <img src="link.png" alt="GitHub Outline" />
+          </div>
+        </div>
+        <div class="icon-wrapper linkedin">
+          <div class="top-icon">
+            <img src="Facebook.png" alt="GitHub Colored" />
+          </div>
+          <div class="bottom-icon">
+            <img src="faceOriginal.png" alt="GitHub Outline" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
