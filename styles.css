@@ -46,13 +46,14 @@ nav ul li a:hover {
 .hero {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 50px;
 }
 
 .content {
   max-width: 70%;
   font-size: 30px;
+  margin-top: 20px;
 }
 
 .highlight {
@@ -67,14 +68,19 @@ nav ul li a:hover {
 .image img {
   width: 500px;
   border-radius: 10px;
+  transition: all 0.3s ease;
 }
+
 .image img:hover {
   transform: scale(1.05);
-  transition: transform 0.3s;
+  box-shadow: 0 0 25px rgba(70, 130, 255, 0.7);
+  /* OR */
+  filter: drop-shadow(0 0 20px rgba(255, 105, 180, 0.8));
 }
 
 .description {
   font-size: 20px;
+  margin-top: 50px;
 }
 
 #portfolio {

@@ -6,74 +6,7 @@
     <title>Personal Profile</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
-    <!-- <style>body {
 
-
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #121212;
-        color: white;
-    }
-    
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        background-color: #1a1a1a;
-    }
-    
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-    }
-    
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-    }
-    
-    .btn {
-        background-color: #ff0055;
-        color: white;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-    
-    .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 50px;
-    }
-    
-    .content {
-        max-width: 53%;
-    }
-    
-    .highlight {
-        color: #ff0055;
-        font-weight: bold;
-        
-    }
-    
-    .bold {
-        font-weight: bold;
-    }
-    
-    .image img {
-        width: 200px;
-        border-radius: 10px;
-    }
-    </style>-->
     <style>
       .icon-wrapper {
         position: relative;
@@ -117,6 +50,37 @@
       .icon-wrapper.linkedin:hover img {
         box-shadow: 0 0 50px rgba(0, 119, 181, 0.8);
       }
+
+      /*Ayanda Lutuli*/
+      .typing-animation {
+        display: inline-block;
+        overflow: hidden;
+        border-right: 2px solid #4ec7f3; /* Cursor */
+        white-space: nowrap;
+        letter-spacing: 1px; /* Adjust if needed */
+        animation: typing 3s steps(14, end) forwards,
+          /* 14 = number of chars in "Ayanda Luthuli" */ blink-caret 0.75s
+            step-end infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        } /* Full width */
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #4ec7f3;
+        }
+      }
     </style>
   </head>
   <body>
@@ -137,20 +101,25 @@
       <div class="content">
         <p>WELCOME TO MY WORLD</p>
         <h1>
-          Hi, I'm <span class="highlight">Ayanda Luthuli</span><br />a
-          <span class="bold">Developer.</span>
+          Hi, I'm <span class="highlight typing-animation"></span><br />
+          a <span class="bold">Developer.</span>
         </h1>
+
         <p class="description">
-          "I started learning <span class="highlight"> HTML and CSS</span> to
-          build my own personal profile website and showcase my skills as a
-          <span class="highlight">software developer</span> . As I explore
-          front-end development, I’m gaining hands-on experience in structuring
-          <span class="highlight">web pages</span>, styling them, and making
-          them visually appealing. This journey is helping me understand the
-          fundamentals of web design, responsive layouts, and UI/UX principles.
-          I’m excited to keep improving and eventually dive deeper into
-          <span class="highlight"> JavaScript</span> and advanced web
-          technologies!"....
+          I started by learning <span class="highlight">HTML</span> and
+          <span class="highlight">CSS</span> to build my personal portfolio
+          website—a space to showcase my skills as a
+          <span class="highlight">Software developer</span>. Through hands-on
+          projects, I’ve gained practical experience in structuring web pages,
+          crafting responsive designs, and creating visually appealing
+          interfaces. This journey has deepened my understanding of core
+          <span class="highlight">Web development</span> principles, UI/UX best
+          practices, and the importance of clean, maintainable code. Now, I’m
+          excited to expand my knowledge further by diving into
+          <span class="highlight">JavaScript</span> and modern frameworks,
+          turning static designs into dynamic, interactive experiences. Every
+          line of code I write is a step toward mastering the art of web
+          development!"
         </p>
       </div>
       <div class="image">
@@ -158,7 +127,9 @@
         <br />
         <div class="icon-wrapper instagram">
           <div class="top-icon">
-            <img src="instaOriginal.png" alt="Instagram Colored" />
+            <a href="https://www.instagram.com/y.b.atee/" target="_blank">
+              <img src="instaOriginal.png" alt="Instagram Colored"
+            /></a>
           </div>
           <div class="bottom-icon">
             <img src="insta.jpg" alt="Instagram Outline" />
@@ -167,7 +138,9 @@
 
         <div class="icon-wrapper github">
           <div class="top-icon">
-            <img src="githubOriginal.png" alt="GitHub Colored" />
+            <a href="https://github.com/AyandaLuthuli" target="_blank">
+              <img src="githubOriginal.png" alt="GitHub Colored"
+            /></a>
           </div>
           <div class="bottom-icon">
             <img src="gighubb.png" alt="GitHub Outline" />
@@ -175,7 +148,12 @@
         </div>
         <div class="icon-wrapper linkedin">
           <div class="top-icon">
-            <img src="linkOriginal.png" alt="GitHub Colored" />
+            <a
+              href="https://www.linkedin.com/in/ayanda-luthuli-b555b9348"
+              target="_blank"
+            >
+              <img src="linkOriginal.png" alt="GitHub Colored"
+            /></a>
           </div>
           <div class="bottom-icon">
             <img src="link.png" alt="GitHub Outline" />
@@ -183,13 +161,32 @@
         </div>
         <div class="icon-wrapper linkedin">
           <div class="top-icon">
-            <img src="Facebook.png" alt="GitHub Colored" />
+            <a href="https://www.facebook.com/ayandaalton/" target="_blank">
+              <img src="gmailOriginal.jpg" alt="GitHub Colored" />
+            </a>
           </div>
           <div class="bottom-icon">
-            <img src="faceOriginal.png" alt="GitHub Outline" />
+            <img src="gmail.png" alt="GitHub Outline" />
           </div>
         </div>
       </div>
     </section>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const name = "Ayanda Luthuli";
+      const typingElement = document.querySelector(".typing-animation");
+
+      typingElement.textContent = name;
+
+      const style = document.createElement("style");
+      style.textContent = `
+    @keyframes typing {
+      from { width: 0 }
+      to { width: ${name.length}ch } /* 1ch ≈ width of "0" */
+    }
+  `;
+      document.head.appendChild(style);
+    });
+  </script>
 </html>
