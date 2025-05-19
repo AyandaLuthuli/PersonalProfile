@@ -4,67 +4,164 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #181818;
-      color: #f5f5f5;
-    }
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #232323;
-      padding: 0.5rem 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+}
 
-    nav .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #f5f5f5;
-      letter-spacing: 2px;
-    }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
 
-    nav ul li a {
-      color: #f5f5f5;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: color 0.2s;
-    }
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+nav ul li a:hover {
+  color: #ff0055;
+  text-shadow: 0 0 30px #ff0055, 0 0 40px #ff0055, 0 0 50px #ff0055;
+}
 
-    nav ul li a:hover {
-      color: #ffd700;
-    }
+.btn {
+  background-color: #ff0055;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
 
-    nav .btn {
-      background: #ffd700;
-      color: #232323;
-      padding: 0.5rem 1.2rem;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s, color 0.2s;
-    }
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
 
-    nav .btn:hover {
-      background: #232323;
-      color: #ffd700;
-      border: 1px solid #ffd700;
-    }
+.content {
+  max-width: 70%;
+  font-size: 30px;
+}
+
+.highlight {
+  color: #ff0055;
+  font-weight: bold;
+}
+
+
+
+
+/*Words*/
+
+.words{
+    margin:20px;
+  font-family:'Roboto';
+  
+}
+
+
+
+#container {
+  
+  color:#ffffff;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  padding-top:200px;  
+  position:fixed;
+  width:40%;
+  bottom:45%;
+  display:inline-block;
+}
+
+#flip {
+  position: relative;
+  height: 50px; /* Adjust height as needed */
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  width: 50%;
+}
+
+#flip > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: flip 12s ease-in-out infinite;
+  animation-delay: calc(var(--order) * -2s); /* 12s total / 6 items = 2s per item */
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+#flip > div > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Different colors for each item */
+#flip > div:nth-child(1) > div { background: #E44D26; } /* HTML Orange */
+#flip > div:nth-child(2) > div { background: #F7DF1E; color: black; } /* JS Yellow */
+#flip > div:nth-child(3) > div { background: #264DE4; } /* CSS Blue */
+#flip > div:nth-child(4) > div { background: #5382A1; } /* Java Blue */
+#flip > div:nth-child(5) > div { background: #5C2D91; } /* VB.net Purple */
+#flip > div:nth-child(6) > div { background: #FF6B6B; } /* Vibe Coding Pink */
+
+/* Animation */
+@keyframes flip {
+  0%, 15% {
+    transform: rotateX(0deg);
+    top: 0;
+    opacity: 1;
+  }
+  16%, 33% {
+    transform: rotateX(-90deg);
+    top: -60px;
+    opacity: 0;
+  }
+  34%, 100% {
+    top: 60px;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+/* Stagger animations */
+#flip > div:nth-child(1) { --order: 0; }
+#flip > div:nth-child(2) { --order: 1; }
+#flip > div:nth-child(3) { --order: 2; }
+#flip > div:nth-child(4) { --order: 3; }
+#flip > div:nth-child(5) { --order: 4; }
+#flip > div:nth-child(6) { --order: 5; }
+
+
 
     .animation-wrapper {
       display: flex;
-      justify-content: center;
+      justify-content:right;
       align-items: center;
       min-height: 80vh;
     }
@@ -128,6 +225,45 @@
   <body>
     
    
+<div class="words">
+  <div id=container>
+  Anything with  
+  <div id=flip>
+    <div><div>HTML</div></div>
+    <div><div>jAVASCRIPT</div></div>
+    <div><div>CSS</div></div>
+     <div><div>JAVA</div></div>
+      <div><div>VB.net</div></div>
+       <div><div>Vibe Coding </div></div>
+  </div>
+  Call me !
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="animation-wrapper">
   <div class="sphere-animation">
     <svg class="sphere" viewBox="0 0 440 440" stroke="rgba(80,80,80,.35)">
