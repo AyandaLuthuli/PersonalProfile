@@ -106,10 +106,19 @@
     <div class="container">
       <div class="glass-card">
         <h1>Contact Me</h1>
-        <form>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="73266220-d7e5-48be-9166-369a4a67ddfe"
+          />
+          <input type="text" name="name" placeholder="name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            placeholder="Your Message"
+            name="message"
+            required
+          ></textarea>
           <button type="submit">Send Message</button>
         </form>
       </div>
