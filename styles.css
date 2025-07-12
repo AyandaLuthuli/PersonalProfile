@@ -154,6 +154,11 @@ h2 {
   padding-bottom: 5px;
 }
 
+h3 {
+  color: #ff0055;
+  margin-top: 20px;
+}
+
 .job,
 .education {
   margin-bottom: 20px;
