@@ -86,6 +86,67 @@ nav ul li a:hover {
 
 
 
+/* tools */
+.tools-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .tool-icon {
+        width: 50px;
+        height: 50px;
+        background: #1a1a1a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        animation: bounce 2s infinite ease-in-out;
+        transition: all 0.3s ease;
+        padding: 10px;
+    }
+    
+    .tool-icon:hover {
+        transform: scale(1.2) translateY(-5px);
+        box-shadow: 0 8px 25px rgba(255, 0, 85, 0.4);
+    }
+    
+    .tool-icon img {
+        max-width: 100%;
+        max-height: 100%;
+        filter: grayscale(30%);
+        transition: filter 0.3s ease;
+    }
+    
+    .tool-icon:hover img {
+        filter: grayscale(0%) brightness(1.2);
+    }
+    
+    /* Individual bounce delays */
+    .tool-icon:nth-child(1) { animation-delay: 0.1s; }
+    .tool-icon:nth-child(2) { animation-delay: 0.2s; }
+    .tool-icon:nth-child(3) { animation-delay: 0.3s; }
+    .tool-icon:nth-child(4) { animation-delay: 0.4s; }
+    .tool-icon:nth-child(5) { animation-delay: 0.5s; }
+    .tool-icon:nth-child(6) { animation-delay: 0.6s; }
+    .tool-icon:nth-child(7) { animation-delay: 0.7s; }
+    .tool-icon:nth-child(8) { animation-delay: 0.8s; }
+    .tool-icon:nth-child(9) { animation-delay: 0.9s; }
+    
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-50px); }
+    }
+
+
+
 #container {
   
   color:#ffffff;
@@ -170,16 +231,21 @@ nav ul li a:hover {
       display: flex;
       justify-content:right;
       align-items: center;
-      min-height: 80vh;
+      
+      /* min-height: 70vh; */
     }
 
     .sphere-animation {
-      width: 1200px;
-      height: 1200px;
+      position: relative;
+      width: 950px;
+      /* height: 1200px; */
       display: flex;
       align-items: center;
       justify-content: center;
       animation: rotate 12s linear infinite;
+      margin-top: 0px;
+     
+
     }
 
     .sphere {
@@ -211,7 +277,7 @@ nav ul li a:hover {
       .sphere-animation {
         width: 150vw;
         height: 150vw;
-        max-width: 500px;
+        max-width: 300px;
         max-height: 500px;
       }
     }
@@ -222,7 +288,7 @@ nav ul li a:hover {
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Features.html">Skills</a></li>
-        <li><a href="Portfolio.html">Projects<</a></li>
+        <li><a href="Portfolio.html">Projects</a></li>
         <li><a href="Resume.html">Resume</a></li>
         <li><a href="history.html">Blog</a></li>
       </ul>
@@ -241,9 +307,38 @@ nav ul li a:hover {
     <div><div>CSS</div></div>
      <div><div>JAVA</div></div>
       <div><div>VB.net</div></div>
-       <div><div>Vibe Coding </div></div>
+       <div><div>AI Prompt</div></div>
   </div>
   Call me !
+</div>
+ <div class="tools-container">
+    <div class="tool-icon">
+        <img src="/icons/html.png" alt="HTML" title="HTML">
+    </div>
+    <div class="tool-icon">
+        <img src="/icons/css.png" alt="CSS" title="CSS">
+    </div>
+    <div class="tool-icon">
+        <img src="/icons/js.png" alt="JavaScript" title="JavaScript">
+    </div>
+    <div class="tool-icon">
+        <img src="/icons/java.png" alt="Java" title="Java">
+    </div>
+    <div class="tool-icon">
+        <img src="/icons/figma.png" alt="Figma" title="Figma">
+    </div>
+    <div class="tool-icon">
+        <img src="/icons/intelij.png" alt="IntelliJ" title="IntelliJ IDEA">
+    </div>
+    <div class="tool-icon">
+        <img src="/icons/mysql.png" alt="MySQL" title="MySQL">
+    </div>
+    <div class="tool-icon">
+        <img src="/icons/vb.net.png" alt="VB.NET" title="VB.NET">
+    </div>
+    <div class="tool-icon">
+        <img src="/icons/vsCode.png" alt="VS Code" title="Visual Studio Code">
+    </div>
 </div>
 </div>
 
