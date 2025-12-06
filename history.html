@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Features</title>
+    <title>My Journey</title>
     <nav>
-      <div class="logo" id="nav ul li a">Timelime</div>
+      <div class="logo">Timeline</div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Features.html">Skills</a></li>
@@ -21,8 +21,8 @@
         text-align: center;
         font-size: 32px;
         margin: 30px 0;
-         color: #ff0055;
-    font-weight: bold;
+        color: #ff0055;
+        font-weight: bold;
       }
 
       .timeline {
@@ -81,7 +81,6 @@
         z-index: 2;
       }
 
-     
       .blue .circle {
         border-color: #3366ff;
         color: #3366ff;
@@ -102,88 +101,104 @@
         border-color: #9933ff;
         color: #9933ff;
       }
-     .history {
+      
+      .history {
         font-size: 13px;
         color: #555;
         list-style-type: circle;
         padding: 0;
-        background-color:white;
-
+        background-color: white;
+        text-align: left;
+        margin: 10px 0;
       }
+      
+      .highlight {
+        color: #ff0055;
+        font-weight: bold;
+      }
+      
+      .achievement {
+        background-color: #f0f8ff;
+        padding: 8px;
+        border-radius: 5px;
+        margin: 5px 0;
+        border-left: 3px solid #3366ff;
+      }
+
       .timeline-item:hover {
         background: #f0f0f0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease;
-        width: 250px;
-        height: 280px;
-        padding: 30px;
-        
+        width: 280px;
+        height: auto;
+        padding: 25px;
       }
-        .timeline-item:hover p {
-            font-size: 24px;
-            transition: all 0.3s ease;
-           
-        }
-        .timeline-item:hover li {
-            font-size: 20px;
-            transition: all 0.3s ease;
-        }
-    
+      
+      .timeline-item:hover .history {
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
     </style>
   </head>
   <body>
-    <h1 class="title">Linear Timeline Template</h1>
+    <h1 class="title">My Development Journey</h1>
     <div class="timeline">
       <div class="timeline-item blue">
         <div class="circle">01</div>
         <h2>2022</h2>
-     
-         <ul id="historyList">
-                <li class="history">  Matriculated, Phoenix <br />College of Johannesburg
-          <br />(Bachelor’s Pass).</li><br />
-                <li class="history">Postion 2 in NSC Math lit Exam</li><br>    
-                <li class="history">Best School Prefect 2022.</li><br>
-              </ul>
+        <ul>
+          <li class="history">Matriculated from Phoenix College of Johannesburg (Bachelor's Pass)</li>
+          <li class="history">Position 2 in NSC Math Literacy Exam</li>
+          <li class="history">Best School Prefect 2022</li>
+        </ul>
       </div>
+      
       <div class="timeline-item yellow">
         <div class="circle">02</div>
         <h2>2023</h2>
-        <p>Diploma in ICT <br />(Software Development), Walter Sisulu.</p>
-        
+        <ul>
+          <li class="history">Started Diploma in ICT (Application Development) at Walter Sisulu University</li>
+          <li class="history">Built foundation in programming concepts</li>
+          <li class="history">First Java & VB.net projects</li>
+        </ul>
       </div>
+      
       <div class="timeline-item red">
         <div class="circle">03</div>
         <h2>2024</h2>
-        <p>
-            <ul id="historyList">
-                <li class="history">University of Walter Sisulu</li><br />
-                <li class="history">Udemy Python full course</li><br>    
-              </ul>
-            
-        </p>
+        <ul>
+          <li class="history">Advanced software development studies</li>
+          <li class="history">Completed Udemy Web Dev Mastery Course</li>
+          <li class="history">Hospital Management System Project (Java)</li>
+          <li class="history">First hackathon participation</li>
+        </ul>
       </div>
+      
       <div class="timeline-item cyan">
         <div class="circle">04</div>
         <h2>2025</h2>
-        <p>
-        <ul id="historyList">
-          <li class="history">University of Walter Sisulu</li><br />
-          <li class="history">Udemy HTML, CSS & JavaScript full course </li><br>    
-          <li class="history">FNB App Academy.</li>
+        <ul>
+          <li class="history"><span class="highlight">Completed Diploma in ICT</span></li>
+          <li class="history achievement">🎖️ <span class="highlight">Top 10 Finalist</span> – FNB App of the Year 2025</li>
+          <li class="history achievement">🥈 <span class="highlight">2nd Place</span> – SATNAC Hackathon 2025</li>
+          <li class="history achievement">🏆 <span class="highlight">IDZ Innovation Challenge</span> Participant</li>
+          <li class="history">Built AI Career Navigation System</li>
+          <li class="history">Developed SMME Funding Matcher</li>
+         
+          <li class="history">FNB App Academy Participant</li>
         </ul>
-        </p>
       </div>
+      
       <div class="timeline-item purple">
         <div class="circle">05</div>
         <h2>2026</h2>
-        <p>
-            <ul id="historyList">
-                <li class="history">Graduated Loading ⌛</li>
-                <li class="history">Intership Loading ⌛</li>
-                <li class="history">Job Loading ⌛</li><br />
-
-            </ul>
-        </p>
+        <ul>
+          <li class="history">🎓 <span class="highlight">Graduation Ceremony:</span> May 2026</li>
+          <li class="history">💼 <span class="highlight">Internship:</span> Loading ⌛</li>
+          <li class="highlight">🚀 <span class="highlight">First Dev Role:</span> Loading ⌛</li>
+          <li class="history">Advance JavaScript & React mastery</li>
+          <li class="history">Contributing to open-source projects</li>
+        </ul>
       </div>
     </div>
   </body>
