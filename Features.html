@@ -4,102 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-  body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: white;
-}
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: white;
+        overflow-x: hidden;
+      }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #1a1a1a;
-}
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #1a1a1a;
+      }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-ul li {
-  background: #333;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 5px;
-}
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+      ul li {
+        background: #333;
+        margin: 5px 0;
+        padding: 10px;
+        border-radius: 5px;
+      }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.2s, text-shadow 0.2s;
-}
-nav ul li a:hover {
-  color: #ff0055;
-  text-shadow: 0 0 30px #ff0055, 0 0 40px #ff0055, 0 0 50px #ff0055;
-}
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        transition: color 0.2s, text-shadow 0.2s;
+      }
+      nav ul li a:hover {
+        color: #ff0055;
+        text-shadow: 0 0 30px #ff0055, 0 0 40px #ff0055, 0 0 50px #ff0055;
+      }
 
-.btn {
-  background-color: #ff0055;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
+      .btn {
+        background-color: #ff0055;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
 
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-}
+      .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+      }
 
-.content {
-  max-width: 70%;
-  font-size: 30px;
-}
+      .content {
+        max-width: 70%;
+        font-size: 30px;
+      }
 
-.highlight {
-  color: #ff0055;
-  font-weight: bold;
-}
+      .highlight {
+        color: #ff0055;
+        font-weight: bold;
+      }
 
+      /* Words */
+      .words {
+        margin: 20px;
+        font-family: 'Roboto';
+        width: 90%;
+      }
 
-
-
-/*Words*/
-
-.words{
-    margin:20px;
-  font-family:'Roboto';
-  width: 90%;
-  
-}
-
-
-
-/* tools */
-.tools-container {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+      /* Tools */
+      .tools-container {
+        position: relative;
         width: 100%;
         display: flex;
         justify-content: center;
         gap: 20px;
-        padding-top: 20px;
+        padding: 20px 0;
         flex-wrap: wrap;
-    }
-    
-    .tool-icon {
+        margin-top: 50px;
+      }
+      
+      .tool-icon {
         width: 50px;
         height: 50px;
         background: #1a1a1a;
@@ -111,187 +104,290 @@ nav ul li a:hover {
         animation: bounce 2s infinite ease-in-out;
         transition: all 0.3s ease;
         padding: 10px;
-    }
-    
-    .tool-icon:hover {
+      }
+      
+      .tool-icon:hover {
         transform: scale(1.2) translateY(-5px);
         box-shadow: 0 8px 25px rgba(255, 0, 85, 0.4);
-    }
-    
-    .tool-icon img {
+      }
+      
+      .tool-icon img {
         max-width: 100%;
         max-height: 100%;
         filter: grayscale(30%);
         transition: filter 0.3s ease;
-    }
-    
-    .tool-icon:hover img {
+      }
+      
+      .tool-icon:hover img {
         filter: grayscale(0%) brightness(1.2);
-    }
-    
-    /* Individual bounce delays */
-    .tool-icon:nth-child(1) { animation-delay: 0.1s; }
-    .tool-icon:nth-child(2) { animation-delay: 0.2s; }
-    .tool-icon:nth-child(3) { animation-delay: 0.3s; }
-    .tool-icon:nth-child(4) { animation-delay: 0.4s; }
-    .tool-icon:nth-child(5) { animation-delay: 0.5s; }
-    .tool-icon:nth-child(6) { animation-delay: 0.6s; }
-    .tool-icon:nth-child(7) { animation-delay: 0.7s; }
-    .tool-icon:nth-child(8) { animation-delay: 0.8s; }
-    .tool-icon:nth-child(9) { animation-delay: 0.9s; }
-    
-    @keyframes bounce {
+      }
+      
+      /* Individual bounce delays */
+      .tool-icon:nth-child(1) { animation-delay: 0.1s; }
+      .tool-icon:nth-child(2) { animation-delay: 0.2s; }
+      .tool-icon:nth-child(3) { animation-delay: 0.3s; }
+      .tool-icon:nth-child(4) { animation-delay: 0.4s; }
+      .tool-icon:nth-child(5) { animation-delay: 0.5s; }
+      .tool-icon:nth-child(6) { animation-delay: 0.6s; }
+      .tool-icon:nth-child(7) { animation-delay: 0.7s; }
+      .tool-icon:nth-child(8) { animation-delay: 0.8s; }
+      .tool-icon:nth-child(9) { animation-delay: 0.9s; }
+      
+      @keyframes bounce {
         0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-50px); }
-    }
-
-
-
-#container {
-  
-  color:#ffffff;
-  text-transform: uppercase;
-  font-size:50px;
-  font-weight:bold;
-  padding-top:200px;  
-  position:fixed;
-  width:50%;
-  bottom:45%;
-  display:inline-block;
-}
-
-#flip {
-  position: relative;
-  height: 50px; /* Adjust height as needed */
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  font-size: 55px;
-  text-align: center;
-  width: 40%;
-}
-
-#flip > div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  animation: flip 12s ease-in-out infinite;
-  animation-delay: calc(var(--order) * -2s); 
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-#flip > div > div {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Different colors for each item */
-#flip > div:nth-child(1) > div { background: #E44D26; } /* HTML Orange */
-#flip > div:nth-child(2) > div { background: #F7DF1E; color: black; } /* JS Yellow */
-#flip > div:nth-child(3) > div { background: #264DE4; } /* CSS Blue */
-#flip > div:nth-child(4) > div { background: #5382A1; } /* Java Blue */
-#flip > div:nth-child(5) > div { background: #5C2D91; } /* VB.net Purple */
-#flip > div:nth-child(6) > div { background: #FF6B6B; } /* Vibe Coding Pink */
-#flip > div:nth-child(7) > div { background: #525252; } /* Github dark*/
-#flip > div:nth-child(8) > div { background: #F24E1E; } /* Figma Orange */
-#flip > div:nth-child(9) > div { background: #00758F; } /* MySQL Blue */
-
-/* Animation */
-@keyframes flip {
-  0%, 15% {
-    transform: rotateX(0deg);
-    top: 0;
-    opacity: 1;
-  }
-  16%, 33% {
-    transform: rotateX(-90deg);
-    top: -60px;
-    opacity: 0;
-  }
-  34%, 100% {
-    top: 60px;
-    opacity: 0;
-    transform: rotateX(90deg);
-  }
-}
-/* Stagger animations */
-#flip > div:nth-child(1) { --order: 0; }
-#flip > div:nth-child(2) { --order: 1; }
-#flip > div:nth-child(3) { --order: 2; }
-#flip > div:nth-child(4) { --order: 3; }
-#flip > div:nth-child(5) { --order: 4; }
-#flip > div:nth-child(6) { --order: 5; }
-#flip > div:nth-child(7) { --order: 6; }
-#flip > div:nth-child(8) { --order: 7; }
-#flip > div:nth-child(9) { --order: 8; }
-
-
-
-    .animation-wrapper {
-      display: flex;
-      justify-content:right;
-      align-items: center;
-      
-      /* min-height: 70vh; */
-    }
-
-    .sphere-animation {
-      position: relative;
-      width: 950px;
-      /* height: 1200px; */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: rotate 12s linear infinite;
-    
-      
-     
-
-    }
-
-    .sphere {
-  width: 60%; 
-      height: 60%; 
-      stroke-width: 2;
-      fill: url(#sphereGradient);
-    }
-
-    @keyframes rotate {
-      0% { transform: rotate(0deg);}
-      100% { transform: rotate(360deg);}
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
+        50% { transform: translateY(-15px); }
       }
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
+
+      #container {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 50px;
+        font-weight: bold;
+        padding-top: 100px;
+        position: relative;
+        width: 50%;
+        display: inline-block;
+        z-index: 10;
+      }
+
+      #flip {
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 55px;
+        text-align: center;
+        width: 40%;
+      }
+
+      #flip > div {
+        position: absolute;
         width: 100%;
+        height: 100%;
+        animation: flip 12s ease-in-out infinite;
+        animation-delay: calc(var(--order) * -2s); 
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
       }
-      .animation-wrapper {
-        min-height: 50vh;
+
+      #flip > div > div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
-      .sphere-animation {
-        width: 150vw;
-        height: 150vw;
-        max-width: 300px;
-        max-height: 500px;
+
+      /* Different colors for each item */
+      #flip > div:nth-child(1) > div { background: #E44D26; }
+      #flip > div:nth-child(2) > div { background: #F7DF1E; color: black; }
+      #flip > div:nth-child(3) > div { background: #264DE4; }
+      #flip > div:nth-child(4) > div { background: #5382A1; }
+      #flip > div:nth-child(5) > div { background: #5C2D91; }
+      #flip > div:nth-child(6) > div { background: #FF6B6B; }
+      #flip > div:nth-child(7) > div { background: #525252; }
+      #flip > div:nth-child(8) > div { background: #F24E1E; }
+      #flip > div:nth-child(9) > div { background: #00758F; }
+
+      /* Animation */
+      @keyframes flip {
+        0%, 15% {
+          transform: rotateX(0deg);
+          top: 0;
+          opacity: 1;
+        }
+        16%, 33% {
+          transform: rotateX(-90deg);
+          top: -60px;
+          opacity: 0;
+        }
+        34%, 100% {
+          top: 60px;
+          opacity: 0;
+          transform: rotateX(90deg);
+        }
       }
-    }
+
+      /* Stagger animations */
+      #flip > div:nth-child(1) { --order: 0; }
+      #flip > div:nth-child(2) { --order: 1; }
+      #flip > div:nth-child(3) { --order: 2; }
+      #flip > div:nth-child(4) { --order: 3; }
+      #flip > div:nth-child(5) { --order: 4; }
+      #flip > div:nth-child(6) { --order: 5; }
+      #flip > div:nth-child(7) { --order: 6; }
+      #flip > div:nth-child(8) { --order: 7; }
+      #flip > div:nth-child(9) { --order: 8; }
+
+      /* NEW: Clean 3D Sphere Animation */
+      .sphere-container {
+        position: absolute;
+        right: 100px;
+        top: 200px;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+      }
+
+      .sphere-3d {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotateSphere 20s linear infinite;
+      }
+
+      .ring {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgba(255, 0, 85, 0.3);
+        border-radius: 50%;
+        transform-style: preserve-3d;
+      }
+
+      .ring:nth-child(1) { transform: rotateY(0deg); }
+      .ring:nth-child(2) { transform: rotateY(30deg); }
+      .ring:nth-child(3) { transform: rotateY(60deg); }
+      .ring:nth-child(4) { transform: rotateY(90deg); }
+      .ring:nth-child(5) { transform: rotateY(120deg); }
+      .ring:nth-child(6) { transform: rotateX(90deg); }
+      .ring:nth-child(7) { transform: rotateX(60deg); }
+      .ring:nth-child(8) { transform: rotateX(30deg); }
+
+      .dot {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #ff0055;
+        border-radius: 50%;
+        top: 50%;
+        left: 0;
+        transform: translateX(-50%);
+        box-shadow: 0 0 15px #ff0055;
+      }
+
+      .ring:nth-child(1) .dot { animation: pulse 2s infinite; }
+      .ring:nth-child(2) .dot { animation: pulse 2s infinite 0.25s; }
+      .ring:nth-child(3) .dot { animation: pulse 2s infinite 0.5s; }
+      .ring:nth-child(4) .dot { animation: pulse 2s infinite 0.75s; }
+      .ring:nth-child(5) .dot { animation: pulse 2s infinite 1s; }
+      .ring:nth-child(6) .dot { animation: pulse 2s infinite 1.25s; }
+      .ring:nth-child(7) .dot { animation: pulse 2s infinite 1.5s; }
+      .ring:nth-child(8) .dot { animation: pulse 2s infinite 1.75s; }
+
+      @keyframes rotateSphere {
+        0% { transform: rotateY(0deg) rotateX(0deg); }
+        100% { transform: rotateY(360deg) rotateX(360deg); }
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.3; transform: translateX(-50%) scale(0.8); }
+        50% { opacity: 1; transform: translateX(-50%) scale(1.2); }
+      }
+
+      /* Layout */
+      .main-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 80vh;
+        padding: 0 50px;
+        position: relative;
+      }
+
+      .text-section {
+        flex: 1;
+        max-width: 50%;
+      }
+
+      @media (max-width: 1024px) {
+        .main-content {
+          flex-direction: column;
+          padding: 20px;
+        }
+        
+        .text-section {
+          max-width: 100%;
+          text-align: center;
+          margin-bottom: 50px;
+        }
+        
+        .sphere-container {
+          position: relative;
+          right: auto;
+          top: auto;
+          margin: 0 auto;
+        }
+        
+        #container {
+          width: 100%;
+          padding-top: 50px;
+          font-size: 40px;
+        }
+        
+        #flip {
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1rem;
+        }
+        
+        nav ul {
+          flex-direction: column;
+          gap: 1rem;
+          width: 100%;
+          margin-top: 10px;
+        }
+        
+        #container {
+          font-size: 30px;
+        }
+        
+        #flip {
+          font-size: 35px;
+          width: 80%;
+        }
+        
+        .sphere-container {
+          width: 250px;
+          height: 250px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #container {
+          font-size: 24px;
+        }
+        
+        #flip {
+          font-size: 28px;
+          width: 90%;
+        }
+        
+        .sphere-container {
+          width: 200px;
+          height: 200px;
+        }
+        
+        .tool-icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
     </style>
     <title>Features</title>
     <nav>
-      <div class="logo" id="nav ul li a">Features</div>
+      <div class="logo">Features</div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Features.html">Skills</a></li>
@@ -303,114 +399,67 @@ nav ul li a:hover {
     </nav>
   </head>
   <body>
-    
-   
-<div class="words">
-  <div id=container>
-  Anything with  
-  <div id=flip>
-    <div><div>HTML</div></div>
-    <div><div>jAVASCRIPT</div></div>
-    <div><div>CSS</div></div>
-     <div><div>JAVA</div></div>
-      <div><div>VB.net</div></div>
-       <div><div>AI Prompt</div></div>
-        <div><div>Github</div></div>
-        <div><div>Figma</div></div>
-        <div><div>MySQL</div></div>
-  </div>
-  Call me !
-</div>
- <div class="tools-container">
-    <div class="tool-icon">
-        <img src="html.png" alt="HTML" title="HTML">
+    <div class="main-content">
+      <div class="text-section">
+        <div class="words">
+          <div id="container">
+            Anything with  
+            <div id="flip">
+              <div><div>HTML</div></div>
+              <div><div>JAVASCRIPT</div></div>
+              <div><div>CSS</div></div>
+              <div><div>JAVA</div></div>
+              <div><div>VB.net</div></div>
+              <div><div>AI Prompt</div></div>
+              <div><div>Github</div></div>
+              <div><div>Figma</div></div>
+              <div><div>MySQL</div></div>
+            </div>
+            Call me!
+          </div>
+          
+          <div class="tools-container">
+            <div class="tool-icon">
+              <img src="html.png" alt="HTML" title="HTML">
+            </div>
+            <div class="tool-icon">
+              <img src="css.png" alt="CSS" title="CSS">
+            </div>
+            <div class="tool-icon">
+              <img src="js.png" alt="JavaScript" title="JavaScript">
+            </div>
+            <div class="tool-icon">
+              <img src="java.png" alt="Java" title="Java">
+            </div>
+            <div class="tool-icon">
+              <img src="figma.png" alt="Figma" title="Figma">
+            </div>
+            <div class="tool-icon">
+              <img src="mysql.png" alt="MySQL" title="MySQL">
+            </div>
+            <div class="tool-icon">
+              <img src="vb.net.png" alt="VB.NET" title="VB.NET">
+            </div>
+            <div class="tool-icon">
+              <img src="vsCode.png" alt="VS Code" title="Visual Studio Code">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- NEW: Clean 3D Sphere -->
+      <div class="sphere-container">
+        <div class="sphere-3d">
+          <div class="ring"><div class="dot"></div></div>
+          <div class="ring"><div class="dot"></div></div>
+          <div class="ring"><div class="dot"></div></div>
+          <div class="ring"><div class="dot"></div></div>
+          <div class="ring"><div class="dot"></div></div>
+          <div class="ring"><div class="dot"></div></div>
+          <div class="ring"><div class="dot"></div></div>
+          <div class="ring"><div class="dot"></div></div>
+        </div>
+      </div>
     </div>
-    <div class="tool-icon">
-        <img src="css.png" alt="CSS" title="CSS">
-    </div>
-    <div class="tool-icon">
-        <img src="js.png" alt="JavaScript" title="JavaScript">
-    </div>
-    <div class="tool-icon">
-        <img src="java.png" alt="Java" title="Java">
-    </div>
-    <div class="tool-icon">
-        <img src="figma.png" alt="Figma" title="Figma">
-    </div>
-    <!-- <div class="tool-icon">
-        <img src="intelij.png" alt="IntelliJ" title="IntelliJ IDEA">
-    </div> -->
-    <div class="tool-icon">
-        <img src="mysql.png" alt="MySQL" title="MySQL">
-    </div>
-    <div class="tool-icon">
-        <img src="vb.net.png" alt="VB.NET" title="VB.NET">
-    </div>
-    <div class="tool-icon">
-        <img src="vsCode.png" alt="VS Code" title="Visual Studio Code">
-    </div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="animation-wrapper">
-  <div class="sphere-animation">
-    <svg class="sphere" viewBox="0 0 440 440" stroke="rgba(80,80,80,.35)">
-      <defs>
-        <linearGradient id="sphereGradient" x1="5%" x2="5%" y1="0%" y2="15%">
-          <stop stop-color="#373734" offset="0%"/>
-          <stop stop-color="#242423" offset="50%"/>
-          <stop stop-color="#0D0D0C" offset="100%"/>
-        </linearGradient>
-      </defs>
-      <path d="M361.604 361.238c-24.407 24.408-51.119 37.27-59.662 28.727-8.542-8.543 4.319-35.255 28.726-59.663 24.408-24.407 51.12-37.269 59.663-28.726 8.542 8.543-4.319 35.255-28.727 59.662z"/>
-      <path d="M360.72 360.354c-35.879 35.88-75.254 54.677-87.946 41.985-12.692-12.692 6.105-52.067 41.985-87.947 35.879-35.879 75.254-54.676 87.946-41.984 12.692 12.692-6.105 52.067-41.984 87.946z"/>
-      <path d="M357.185 356.819c-44.91 44.91-94.376 68.258-110.485 52.149-16.11-16.11 7.238-65.575 52.149-110.485 44.91-44.91 94.376-68.259 110.485-52.15 16.11 16.11-7.239 65.576-52.149 110.486z"/>
-      <path d="M350.998 350.632c-53.21 53.209-111.579 81.107-130.373 62.313-18.794-18.793 9.105-77.163 62.314-130.372 53.209-53.21 111.579-81.108 130.373-62.314 18.794 18.794-9.105 77.164-62.314 130.373z"/>
-      <path d="M343.043 342.677c-59.8 59.799-125.292 91.26-146.283 70.268-20.99-20.99 10.47-86.483 70.269-146.282 59.799-59.8 125.292-91.26 146.283-70.269 20.99 20.99-10.47 86.484-70.27 146.283z"/>
-      <path d="M334.646 334.28c-65.169 65.169-136.697 99.3-159.762 76.235-23.065-23.066 11.066-94.593 76.235-159.762s136.697-99.3 159.762-76.235c23.065 23.065-11.066 94.593-76.235 159.762z"/>
-      <path d="M324.923 324.557c-69.806 69.806-146.38 106.411-171.031 81.76-24.652-24.652 11.953-101.226 81.759-171.032 69.806-69.806 146.38-106.411 171.031-81.76 24.652 24.653-11.953 101.226-81.759 171.032z"/>
-      <path d="M312.99 312.625c-73.222 73.223-153.555 111.609-179.428 85.736-25.872-25.872 12.514-106.205 85.737-179.428s153.556-111.609 179.429-85.737c25.872 25.873-12.514 106.205-85.737 179.429z"/>
-      <path d="M300.175 299.808c-75.909 75.909-159.11 115.778-185.837 89.052-26.726-26.727 13.143-109.929 89.051-185.837 75.908-75.908 159.11-115.778 185.837-89.051 26.726 26.726-13.143 109.928-89.051 185.836z"/>
-      <path d="M284.707 284.34c-77.617 77.617-162.303 118.773-189.152 91.924-26.848-26.848 14.308-111.534 91.924-189.15C265.096 109.496 349.782 68.34 376.63 95.188c26.849 26.849-14.307 111.535-91.923 189.151z"/>
-      <path d="M269.239 267.989c-78.105 78.104-163.187 119.656-190.035 92.807-26.849-26.848 14.703-111.93 92.807-190.035 78.105-78.104 163.187-119.656 190.035-92.807 26.849 26.848-14.703 111.93-92.807 190.035z"/>
-      <path d="M252.887 252.52C175.27 330.138 90.584 371.294 63.736 344.446 36.887 317.596 78.043 232.91 155.66 155.293 233.276 77.677 317.962 36.521 344.81 63.37c26.85 26.848-14.307 111.534-91.923 189.15z"/>
-      <path d="M236.977 236.61C161.069 312.52 77.867 352.389 51.14 325.663c-26.726-26.727 13.143-109.928 89.052-185.837 75.908-75.908 159.11-115.777 185.836-89.05 26.727 26.726-13.143 109.928-89.051 185.836z"/>
-      <path d="M221.067 220.7C147.844 293.925 67.51 332.31 41.639 306.439c-25.873-25.873 12.513-106.206 85.736-179.429C200.6 53.786 280.931 15.4 306.804 41.272c25.872 25.873-12.514 106.206-85.737 179.429z"/>
-      <path d="M205.157 204.79c-69.806 69.807-146.38 106.412-171.031 81.76-24.652-24.652 11.953-101.225 81.759-171.031 69.806-69.807 146.38-106.411 171.031-81.76 24.652 24.652-11.953 101.226-81.759 171.032z"/>
-      <path d="M189.247 188.881c-65.169 65.169-136.696 99.3-159.762 76.235-23.065-23.065 11.066-94.593 76.235-159.762s136.697-99.3 159.762-76.235c23.065 23.065-11.066 94.593-76.235 159.762z"/>
-      <path d="M173.337 172.971c-59.799 59.8-125.292 91.26-146.282 70.269-20.991-20.99 10.47-86.484 70.268-146.283 59.8-59.799 125.292-91.26 146.283-70.269 20.99 20.991-10.47 86.484-70.269 146.283z"/>
-      <path d="M157.427 157.061c-53.209 53.21-111.578 81.108-130.372 62.314-18.794-18.794 9.104-77.164 62.313-130.373 53.21-53.209 111.58-81.108 130.373-62.314 18.794 18.794-9.105 77.164-62.314 130.373z"/>
-      <path d="M141.517 141.151c-44.91 44.91-94.376 68.259-110.485 52.15-16.11-16.11 7.239-65.576 52.15-110.486 44.91-44.91 94.375-68.258 110.485-52.15 16.109 16.11-7.24 65.576-52.15 110.486z"/>
-      <path d="M125.608 125.241c-35.88 35.88-75.255 54.677-87.947 41.985-12.692-12.692 6.105-52.067 41.985-87.947C115.525 43.4 154.9 24.603 167.592 37.295c12.692 12.692-6.105 52.067-41.984 87.946z"/>
-      <path d="M109.698 109.332c-24.408 24.407-51.12 37.268-59.663 28.726-8.542-8.543 4.319-35.255 28.727-59.662 24.407-24.408 51.12-37.27 59.662-28.727 8.543 8.543-4.319 35.255-28.726 59.663z"/>
-    </svg>
-  </div>
-</div>
-     
-    </p>
   </body>
 </html>
