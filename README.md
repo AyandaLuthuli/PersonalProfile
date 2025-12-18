@@ -1,11 +1,60 @@
- Personal Profile Website
-This is a clean and responsive personal portfolio website built with HTML and CSS. It showcases my skills, projects,
-and provides contact links for professional networking.
+🌐 Personal Profile Website
+
+A clean, responsive personal portfolio website built using HTML and CSS.
+This site showcases my skills, projects, and provides easy access to my professional contact links.
+
+⸻
 
 💼 Purpose
-The goal of this project is to create an online presence that reflects my personal brand as a developer, 
-designer, or tech enthusiast, and allows visitors to learn more about me and get in touch.
+
+The purpose of this project is to establish a strong online presence that reflects my personal brand as a software developer.
+It allows visitors to:
+	•	Learn more about who I am
+	•	Explore my skills and projects
+	•	Connect with me for opportunities and collaborations
+
+⸻
 
 👤 About Me
-Hi, I'm Ayanda Luthuli – a passionate developer from South Africa who enjoys building interactive,
-user-friendly web experiences. I'm currently learning full-stack development and exploring technologies like JavaScript, Java, SQL, and React.
+
+Hi, I’m Ayanda Luthuli, a passionate software developer from South Africa 🇿🇦.
+I enjoy building interactive, user-friendly web experiences and turning ideas into practical solutions.
+
+I am currently focused on full-stack development and continuously improving my skills in:
+	•	HTML & CSS
+	•	JavaScript
+	•	Java
+	•	SQL
+	•	React
+
+⸻
+
+🚀 Features
+	•	Responsive and mobile-friendly design
+	•	Clean and modern UI
+	•	About Me & Skills sections
+	•	Project showcase
+	•	Contact links for professional networking
+
+⸻
+
+🛠️ Technologies Used
+	•	HTML5
+	•	CSS3
+
+⸻
+
+📌 Future Improvements
+	•	Add JavaScript for interactivity
+	•	Integrate React components
+	•	Connect a backend for dynamic content
+	•	Deploy and link live projects
+
+⸻
+
+📬 Contact
+
+Feel free to connect with me:
+	•	LinkedIn: (add your link)
+	•	GitHub: (your profile)
+	•	Portfolio: (live link if available)
