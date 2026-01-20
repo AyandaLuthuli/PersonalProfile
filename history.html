@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>My Journey</title>
+    <title>Features</title>
     <nav>
-      <div class="logo">Timeline</div>
+      <div class="logo" id="nav ul li a">Timelime</div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="Features.html">Skills</a></li>
@@ -25,180 +25,268 @@
         font-weight: bold;
       }
 
-      .timeline {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        max-width: 1910px;
+      .timeline-container {
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 40px 30px;
         position: relative;
+        padding: 40px 0;
       }
 
-      .timeline::before {
-        content: "";
+      .timeline-line {
         position: absolute;
-        top: 100px;
-        left: 0;
-        right: 0;
-        height: 6px;
-        background: #ddd;
-        z-index: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #ff0055, #c400ff, #4ec7f3);
+        border-radius: 2px;
       }
 
       .timeline-item {
-        background: white;
-        padding: 20px;
-        width: 180px;
-        text-align: center;
-        border-radius: 10px;
+        display: flex;
+        margin-bottom: 80px;
         position: relative;
-        z-index: 1;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        align-items: center;
       }
 
-      .timeline-item h2 {
-        margin: 15px 0 10px;
-        font-size: 20px;
+      .timeline-item.left {
+        flex-direction: row;
       }
 
-      .timeline-item p {
-        font-size: 13px;
-        color: #555;
+      .timeline-item.right {
+        flex-direction: row-reverse;
+      }
+
+      .timeline-content {
+        width: 45%;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.08),
+          rgba(255, 255, 255, 0.04)
+        );
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s ease;
+        position: relative;
+      }
+
+      .timeline-item.left .timeline-content {
+        margin-right: auto;
+      }
+
+      .timeline-item.right .timeline-content {
+        margin-left: auto;
+      }
+
+      .timeline-content:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.12),
+          rgba(255, 255, 255, 0.06)
+        );
+      }
+
+      .timeline-content h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .timeline-content ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .timeline-content li {
+        color: #a3b3c2;
+        margin: 12px 0;
+        padding-left: 20px;
+        position: relative;
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .timeline-content li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #4ec7f3;
+        font-weight: bold;
       }
 
       .circle {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
+        width: 60px;
+        height: 60px;
         background: white;
-        border: 4px solid;
+        border: 5px solid;
         border-radius: 50%;
-        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-weight: bold;
-        position: relative;
-        top: -40px;
-        z-index: 2;
+        font-size: 20px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        box-shadow: 0 0 0 8px rgba(11, 15, 20, 1);
       }
 
       .blue .circle {
         border-color: #3366ff;
         color: #3366ff;
       }
+
       .yellow .circle {
         border-color: #ffcc00;
         color: #ffcc00;
       }
+
       .red .circle {
         border-color: #ff4d4d;
         color: #ff4d4d;
       }
+
       .cyan .circle {
         border-color: #00cccc;
         color: #00cccc;
       }
+
       .purple .circle {
         border-color: #9933ff;
         color: #9933ff;
       }
-      
-      .history {
-        font-size: 13px;
-        color: #555;
-        list-style-type: circle;
-        padding: 0;
-        background-color: white;
-        text-align: left;
-        margin: 10px 0;
-      }
-      
-      .highlight {
-        color: #ff0055;
-        font-weight: bold;
-      }
-      
-      .achievement {
-        background-color: #f0f8ff;
-        padding: 8px;
-        border-radius: 5px;
-        margin: 5px 0;
-        border-left: 3px solid #3366ff;
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          gap: 20px;
+          padding: 20px;
+        }
+
+        nav ul {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+        }
+
+        .timeline-line {
+          left: 30px;
+        }
+
+        .timeline-item.left,
+        .timeline-item.right {
+          flex-direction: row;
+          padding-left: 80px;
+        }
+
+        .timeline-content {
+          width: 100%;
+          margin: 0 !important;
+        }
+
+        .circle {
+          left: 30px;
+          transform: translateX(-50%);
+        }
       }
 
-      .timeline-item:hover {
-        background: #f0f0f0;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        width: 280px;
-        height: auto;
-        padding: 25px;
-      }
-      
-      .timeline-item:hover .history {
-        font-size: 14px;
-        transition: all 0.3s ease;
+      @media (max-width: 480px) {
+        .timeline-content {
+          padding: 20px;
+        }
+
+        .timeline-content h2 {
+          font-size: 24px;
+        }
+
+        .timeline-content li {
+          font-size: 14px;
+        }
+
+        .circle {
+          width: 50px;
+          height: 50px;
+          font-size: 16px;
+        }
       }
     </style>
   </head>
   <body>
-    <h1 class="title">My Development Journey</h1>
-    <div class="timeline">
-      <div class="timeline-item blue">
+    <h1 class="title">My Journey Timeline</h1>
+
+    <div class="timeline-container">
+      <div class="timeline-line"></div>
+
+      <!-- 2026 - Left -->
+      <div class="timeline-item left purple">
         <div class="circle">01</div>
-        <h2>2022</h2>
-        <ul>
-          <li class="history">Matriculated from Phoenix College of Johannesburg (Bachelor's Pass)</li>
-          <li class="history">Position 2 in NSC Math Literacy Exam</li>
-          <li class="history">Best School Prefect 2022</li>
-        </ul>
+        <div class="timeline-content">
+          <h2>2026</h2>
+          <ul>
+            <li>Graduation Loading ⌛</li>
+            <li>Internship Loading ⌛</li>
+            <li>Job Loading ⌛</li>
+          </ul>
+        </div>
       </div>
-      
-      <div class="timeline-item yellow">
+
+      <!-- 2025 - Right -->
+      <div class="timeline-item right cyan">
         <div class="circle">02</div>
-        <h2>2023</h2>
-        <ul>
-          <li class="history">Started Diploma in ICT (Application Development) at Walter Sisulu University</li>
-          <li class="history">Built foundation in programming concepts</li>
-          <li class="history">First Java & VB.net projects</li>
-        </ul>
+        <div class="timeline-content">
+          <h2>2025</h2>
+          <ul>
+            <li>Continued studies at Walter Sisulu University</li>
+            <li>Completed Udemy HTML, CSS & JavaScript Full Course</li>
+            <li>Joined FNB App Academy</li>
+          </ul>
+        </div>
       </div>
-      
-      <div class="timeline-item red">
+
+      <!-- 2024 - Left -->
+      <div class="timeline-item left red">
         <div class="circle">03</div>
-        <h2>2024</h2>
-        <ul>
-          <li class="history">Advanced software development studies</li>
-          <li class="history">Completed Udemy Web Dev Mastery Course</li>
-          <li class="history">Hospital Management System Project (Java)</li>
-          <li class="history">First hackathon participation</li>
-        </ul>
+        <div class="timeline-content">
+          <h2>2024</h2>
+          <ul>
+            <li>Continued studies at Walter Sisulu University</li>
+            <li>Completed Udemy Python Full Course</li>
+          </ul>
+        </div>
       </div>
-      
-      <div class="timeline-item cyan">
+
+      <!-- 2023 - Right -->
+      <div class="timeline-item right yellow">
         <div class="circle">04</div>
-        <h2>2025</h2>
-        <ul>
-          <li class="history"><span class="highlight">Completed Diploma in ICT</span></li>
-          <li class="history achievement">🎖️ <span class="highlight">Top 10 Finalist</span> – FNB App of the Year 2025</li>
-          <li class="history achievement">🥈 <span class="highlight">2nd Place</span> – SATNAC Hackathon 2025</li>
-          <li class="history achievement">🏆 <span class="highlight">IDZ Innovation Challenge</span> Participant</li>
-          <li class="history">Built AI Career Navigation System</li>
-          <li class="history">Developed SMME Funding Matcher</li>
-         
-          <li class="history">FNB App Academy Participant</li>
-        </ul>
+        <div class="timeline-content">
+          <h2>2023</h2>
+          <ul>
+            <li>
+              Diploma in ICT (Software Development), Walter Sisulu University
+            </li>
+          </ul>
+        </div>
       </div>
-      
-      <div class="timeline-item purple">
+
+      <!-- 2022 - Left -->
+      <div class="timeline-item left blue">
         <div class="circle">05</div>
-        <h2>2026</h2>
-        <ul>
-          <li class="history">🎓 <span class="highlight">Graduation Ceremony:</span> May 2026</li>
-          <li class="history">💼 <span class="highlight">Internship:</span> Loading ⌛</li>
-          <li class="history">🚀 <span class="highlight">First Dev Role:</span> Loading ⌛</li>
-          <li class="history">Advance JavaScript & React mastery</li>
-          <li class="history">Contributing to open-source projects</li>
-        </ul>
+        <div class="timeline-content">
+          <h2>2022</h2>
+          <ul>
+            <li>
+              Matriculated, Phoenix College of Johannesburg (Bachelor's Pass)
+            </li>
+            <li>Position 2 in NSC Math Lit Exam</li>
+            <li>Best School Prefect 2022</li>
+          </ul>
+        </div>
       </div>
     </div>
   </body>
